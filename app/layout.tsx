@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import ThemeToggleButton from "./toggele";
-import MyProfilepic from "./components/MyProfilepic";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='font-sans bg-white dark:bg-gray-900'>
-      <ThemeToggleButton/>
-        <Navbar/>
-        <MyProfilepic/>
-        {children}
-        </body>
+      <body className="font-sans bg-white dark:bg-gray-900">
+        <ThemeToggleButton />
+        <Navbar />
+        <main className="px-4 md::px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

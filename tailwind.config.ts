@@ -18,6 +18,7 @@ const config: Config = {
   darkMode: 'class',
   plugins: [
     require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio')
   ],
 };
 export default config;
